@@ -33,7 +33,7 @@ int	main()
 	std::cout << G "The memory address held by stringREF :\n	" RS;
 	std::cout << &stringREF << std::endl;
 
-		std::cout << Y "\nThe value of the string variable :\n	" RS;
+	std::cout << Y "\nThe value of the string variable :\n	" RS;
 	std::cout << str << std::endl;
 	std::cout << Y "The value pointed to by stringPTR :\n	" RS;
 	std::cout << *stringPTR << std::endl;
