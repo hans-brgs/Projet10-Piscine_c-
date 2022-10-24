@@ -14,6 +14,7 @@ fclean:
 
 MSG = ""
 git: fclean
+	@printf "$(COL_y)[+]$(COL_def)"
 	@git add .
 	@git commit -am "`date +'%d-%m-%Y %H:%M:%S'` | $(MSG)"
 	@git push
