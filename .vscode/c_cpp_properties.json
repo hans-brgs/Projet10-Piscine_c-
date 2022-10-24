@@ -4,7 +4,8 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "${workspaceFolder}/C00/ex02/includes"
+                "${workspaceFolder}/C00/ex02/includes",
+                "${workspaceFolder}/C01/ex00/includes"
             ],
             "defines": [
                 "_DEBUG",
