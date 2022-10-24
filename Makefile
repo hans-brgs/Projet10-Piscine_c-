@@ -14,9 +14,9 @@ fclean:
 
 MSG = ""
 git: fclean
-	@printf "$(COL_g)[\ngit add .\n]$(COL_def)"
+	@printf "$(COL_g)\n[git add .]\n$(COL_def)"
 	@git add .
-	@printf "$(COL_g)[\ngit comit\n]$(COL_def)"
+	@printf "$(COL_g)\n[git comit]\n$(COL_def)"
 	@git commit -am "`date +'%d-%m-%Y %H:%M:%S'` | $(MSG)"
-	@printf "$(COL_g)[\ngit push\n]$(COL_def)"
+	@printf "$(COL_g)\n[git push]\n$(COL_def)"
 	@git push
