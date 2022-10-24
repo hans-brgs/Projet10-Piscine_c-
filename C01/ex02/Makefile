@@ -54,9 +54,10 @@ re:			fclean all
 #-----------------------------------------#
 
 MSG = ""
+DATE = $(shell `date +"%m-%d-%Y %H:%M:%S")
 git: fclean
 	@git add .
-	@git commit -am "`date +"%m-%d-%Y %H:%M:%S"` | $(MSG)"
+	@git commit -am "$(DATE) | $(MSG)"
 	@git push
 
 # VALGRIND
