@@ -15,5 +15,5 @@ fclean:
 MSG = ""
 git: fclean
 	@git add .
-	@git commit -am "`date + '%m-%d-%Y %H:%M:%S'` | $(MSG)"
+	@git commit -am "`date +'%m-%d-%Y %H:%M:%S'` | $(MSG)"
 	@git push
