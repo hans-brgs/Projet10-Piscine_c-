@@ -63,7 +63,7 @@ ClapTrap& ClapTrap::operator=(const ClapTrap &rhs)
 		this->_energyPoints = rhs._energyPoints;
 		this->_attackDamage = rhs._attackDamage;
 	}
-	return *this ;
+	return *this;
 }
 
 void	ClapTrap::attack(const std::string& target)
