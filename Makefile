@@ -1,6 +1,7 @@
 OBJS_DIR =$(shell find -type d -name "objs" -print) 
 OBJS = $(shell find -name "*.o")
 EXEC = $(shell find -name "*.out")
+LEAK = $(shell find -name "*.txt")
 
 RM = rm -f
 RMF = rm -rf
@@ -14,7 +15,7 @@ COL_def	=	\033[0;m
 fclean: 
 		@printf "$(COL_y)[+]$(COL_def)"
 		@$(RMF) $(OBJS_DIR)
-		@$(RM) $(OBJS) $(EXEC)
+		@$(RM) $(OBJS) $(EXEC) $(LEAK)
 		@echo "\n$(COL_r)Remove object and executable file !$(COL_def)"
 
 MSG = ""
