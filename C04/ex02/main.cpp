@@ -15,32 +15,42 @@
 #include "Dog.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include "Brain.hpp"
 
 int main()
 {
-	std::cout << B_M "\nTRUE ANIMALS :" RS << std::endl;
-	const	Animal* meta = new Animal();
-	const	Animal* j = new Dog();
-	const	Animal* i = new Cat();
+	const	Animal* meta[10];
+	const	Cat* babyCat;
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete i;
-	delete j;
+	/*I	f you uncomment these two lines, the compiler will insult you!
+		It is impossible to instantiate a class with a pure virtual method.  */
+	// const	Animal* err; 
+	// err = new Animal();
+	for (int i(0); i < 10; i++)
+	{
+		if (i < 5)
+			meta[i] = new Cat();
+		else
+			meta[i] = new Dog();
+	}
+	std::cout << std::endl;
+	
+	for (int i(0); i < 10; i++)
+		std::cout << meta[i]->getType() << std::endl;
+	std::cout << std::endl;
+	
+	babyCat = new Cat();
+	std::cout << G "\nbabyCat has 100 ideas to make a mess: " RS << std::endl;
+	babyCat->getIdeas();
 
-	std::cout << B_M "\nWRONG ANIMALS :" RS << std::endl;
-	const	WrongAnimal* wrong_meta = new WrongAnimal();
-	const	WrongAnimal* wrong_i = new WrongCat();
+	std::cout << G "\nMeta animals should be cast as <<cat *>> or <<dog *>> to get ideas:" RS << std::endl;
+	((Cat *)meta[0])->getIdeas();
 
-	std::cout << wrong_i->getType() << " " << std::endl;
-	wrong_i->makeSound(); //will output the wrong cat sound!
-	wrong_meta->makeSound();
-	delete wrong_meta;
-	delete wrong_i;
-
+	std::cout << std::endl;
+	for (int i(0); i < 10; i++)
+		delete meta[i];
+	std::cout << std::endl;
+	delete babyCat;
+	
 	return 0;
 }

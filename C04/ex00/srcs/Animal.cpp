@@ -21,8 +21,7 @@ Animal::Animal() : _type("")
 
 Animal::~Animal()
 {
-	std::cout	<< RS "Animal " B "Destructor called" RS << std::endl
-				<< B "Type : " RS << this->_type << std::endl;
+	std::cout	<< RS "Animal " B "Destructor called" RS << std::endl;
 	return ;
 }
 

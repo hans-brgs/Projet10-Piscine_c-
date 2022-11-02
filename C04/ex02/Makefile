@@ -13,12 +13,14 @@ SRCS		=	Animal.cpp			\
 				Cat.cpp				\
 				WrongCat.cpp		\
 				Dog.cpp				\
+				Brain.cpp			\
 				main.cpp
 DEPS		=   Animal.hpp			\
 				WrongAnimal.hpp		\
 				Cat.hpp				\
 				WrongCat.hpp		\
-				Dog.hpp			
+				Dog.hpp				\
+				Brain.hpp
 OBJS 		= 	$(addprefix $(OBJ_DIR), $(SRCS:.cpp=.o))
 
 # SEARCH PATH TO FIND FILES

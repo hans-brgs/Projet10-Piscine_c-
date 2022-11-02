@@ -1,46 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hbourgeo <hbourgeo@student.19.be>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/01 11:14:55 by hbourgeo          #+#    #+#             */
-/*   Updated: 2022/11/01 11:14:55 by hbourgeo         ###   ########.fr       */
+/*   Created: 2022/11/01 11:06:18 by hbourgeo          #+#    #+#             */
+/*   Updated: 2022/11/01 11:06:18 by hbourgeo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Animal.hpp"
 
-Cat::Cat() : Animal()
+Animal::Animal() : _type("")
 {
-	this->_type = "Cat";
-	std::cout	<< RS "Cat " B "Default constructor called" RS << std::endl
-				<< B "Type : " RS << this->_type << std::endl;
+	std::cout	<< RS "Animal " B "Default constructor called" RS << std::endl;
 	return ;
 }
 
-Cat::~Cat()
+Animal::~Animal()
 {
-	std::cout	<< RS "Cat " B "Destructor called" RS << std::endl;
+	std::cout	<< RS "Animal " B "Destructor called" RS << std::endl;
 	return ;
 }
 
-Cat::Cat(const Cat& src) : Animal(src)
+Animal::Animal(const Animal& src) : _type(src._type)
 {
-	std::cout << RS "Cat " B "Copy constructor called" RS << std::endl;
+	std::cout << RS "Animal " B "Copy constructor called" RS << std::endl;
 	return ;
 }
 
-Cat& Cat::operator=(const Cat& rhs)
+Animal& Animal::operator=(const Animal& rhs)
 {
 	if (this != &rhs)
 		this->_type = rhs._type;
 	return *this;
 }
 
-void	Cat::makeSound() const
+void		Animal::makeSound() const
 {
-	std::cout << G "Miaaaaou Miaouuu" RS << std::endl;
 	return ;
 }
+
+std::string	Animal::getType() const
+{
+	return (this->_type);
+}
+
+
