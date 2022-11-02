@@ -1,4 +1,4 @@
-OBJS_DIR =$(shell find $(PWD) -type d -name "objs" -print) 
+OBJS_DIR =$(shell find -type d -name "objs" -print) 
 OBJS = $(shell find -name "*.o")
 EXEC = $(shell find -name "*.out")
 
