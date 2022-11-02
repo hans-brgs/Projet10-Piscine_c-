@@ -1,5 +1,6 @@
 # PROGRAMME NAME
-NAME		=	action.out
+CURRENT_DIR =	$(shell basename "$(PWD)")
+NAME		=	$(addprefix $(CURRENT_DIR), .out)
 
 # PATH
 INC_DIR		= 	includes/
